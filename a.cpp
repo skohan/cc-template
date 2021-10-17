@@ -9,7 +9,8 @@ typedef long long ll;
 #define nl "\n"
 
 const int N = 3 * 1e5 + 2;
-const int mod = 1e9 + 7;
+// const int mod = 1e9 + 7;
+const ll mod = 998244353;
 
 int smalla = 97;
 int biga = 65;
@@ -17,37 +18,15 @@ int biga = 65;
 
 void solve()
 {
-    int n;
-    cin >> n;
+    bool sp = false;
 
-    vector<int> v(n);
-    for(int& x:v)
-        cin >> x;
+    for (int i = 0; i < 3; i++){
+        int x; cin >> x;
+        if (x == 7)
+            sp = true;
+    }
 
-    int mx = *max_element(v.begin(), v.end());
-    int mn = *min_element(v.begin(), v.end());
-
-    int l = mn, h = mx;
-
-    auto calc = [&](int c){
-        ll cost = 0;
-        for(auto x:v)
-            cost += abs(c-x);
-        return cost;
-    };
-    
-    while(h - l > 2)
-    {
-        int lh = l + (h-l)/3;
-        int hl = h - (h-l)/3;
-
-        if(calc(lh) >= calc(hl))
-            l = lh;
-        else
-            h = hl;
-    } 
-
-    cout << calc(l + (h-l)/2) << nl;
+    cout << (sp ? "YES" : "NO") << nl;
 }
    
 int main(){
@@ -56,7 +35,7 @@ int main(){
     cin.tie(NULL);
  
     int t = 1;
-    // cin>>t;
+    cin>>t;
 
     int c = 1;
 
@@ -68,3 +47,18 @@ int main(){
         c++;
     }
 }
+
+
+// Binary Search
+
+// int a = 0, b = n-1;
+// while (a <= b){
+//     int m = a + (b-a)/2;
+//     if (arr[m] == x){
+//         // found it
+//     }
+
+//     if (arr[m] > x) b = m-1;
+//     else            a = m+1;
+// }
+ 
