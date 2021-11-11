@@ -16,20 +16,15 @@ int smalla = 97;
 int biga = 65;
 
 
-void solve()
+void 
+solve()
 {
-    bool sp = false;
-
-    for (int i = 0; i < 3; i++){
-        int x; cin >> x;
-        if (x == 7)
-            sp = true;
-    }
-
-    cout << (sp ? "YES" : "NO") << nl;
+    // write here
 }
    
-int main(){
+int 
+main()
+{
  
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
@@ -39,26 +34,10 @@ int main(){
 
     int c = 1;
 
-    while(t--)
-    {
+    while(t--) {
         // cout << "Case #" << c <<": " ;
 
         solve();
         c++;
     }
 }
-
-
-// Binary Search
-
-// int a = 0, b = n-1;
-// while (a <= b){
-//     int m = a + (b-a)/2;
-//     if (arr[m] == x){
-//         // found it
-//     }
-
-//     if (arr[m] > x) b = m-1;
-//     else            a = m+1;
-// }
- 
