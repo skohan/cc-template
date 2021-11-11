@@ -5,7 +5,8 @@ echo Compiling
 # If logs are really big use this
 # time (make ans && ./ans < in.txt > log)
 
-g++ -std=c++11 -O2 -Wall  $1.cpp -o out && echo Running && ./out < in.txt
+g++ -std=c++11 -O2 -Wall  $1.cpp -o out && echo Running && ./out < in.txt > out.txt
+# g++ -std=c++11 -O2 -Wall  $1.cpp -o out && echo Running && ./out < in.txt 
 
 # Cleaning
 rm out
